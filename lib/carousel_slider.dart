@@ -285,7 +285,7 @@ class CarouselSliderState extends State<CarouselSlider>
         return AnimatedBuilder(
           animation: carouselState!.pageController!,
           child: (widget.items != null)
-              ? (widget.items!.length > 0 ? widget.items![index] : Container())
+              ? (widget.items!.length > 0 ? widget.items![index] : null)
               : widget.itemBuilder!(context, index, idx),
           builder: (BuildContext context, child) {
             double distortionValue = 1.0;
